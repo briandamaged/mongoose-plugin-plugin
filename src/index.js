@@ -14,6 +14,8 @@ function createPlugin() {
       plugin:  p,
       options: options
     });
+
+    return plugin;
   }
 
   // In case you want to think of this thing as a
