@@ -1,0 +1,24 @@
+{
+  "name": "mongoose-plugin-plugin",
+  "version": "1.0.0",
+  "description": "A Mongoose plugin that plugs-in plugins!",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/briandamaged/mongoose-plugin-plugin.git"
+  },
+  "keywords": [
+    "mongoose",
+    "mongoose-plugin",
+    "compose"
+  ],
+  "author": "Brian Lauber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/briandamaged/mongoose-plugin-plugin/issues"
+  },
+  "homepage": "https://github.com/briandamaged/mongoose-plugin-plugin#readme"
+}
