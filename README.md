@@ -35,9 +35,9 @@ CarSchema.plugin(mpp);
 CoffeeSchema.plugin(mpp);
 ```
 
-## ...Why? ##
+## ...why? ##
 
-Here's a more realistic example.  In this case, we want to change the way our plugins are configured depending upon whether or not we are in the development environment:
+Here's a more realistic example.  In this case, we want to change the way our plugins are configured depending upon whether or not we are in debug mode:
 
 ```javascript
 
@@ -65,4 +65,16 @@ function createPlugin(isDebugMode, amqpChannel) {
   return mpp;
 }
 
+```
+
+## ...so what? ##
+
+Now we have an easy way to verify exactly how the plugins will be configured _before_ they are plugged into the Schemas.  For example:
+
+```
+var mpp = createMPP(true, channel);
+
+// Show exactly which plugins will be used, and how
+// they will be configured.
+console.log(mpp.spec);
 ```
