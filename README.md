@@ -80,3 +80,33 @@ var mpp = createMPP(true, channel);
 // they will be configured.
 console.log(mpp.spec);
 ```
+
+## Other Fancy Tricks ##
+
+### Initializer Function ###
+
+You can actually pass in an initializer function when creating your plugin-plugin instance.  For example:
+
+```javascript
+function createPlugin() {
+  return createMPP(function(mpp) {
+    mpp.push(plugin1)
+       .push(plugin2)
+       .push(plugin3);
+  });
+}
+```
+
+Why would you ever want to do this?  Well, let's see if you can spot the error in the code below:
+
+```javascript
+function createPlugin() {
+  var mpp = createMPP();
+
+  mpp.push(plugin1)
+     .push(plugin2)
+     .push(plugin3);
+}
+```
+
+It's pretty easy to forget that return statement, huh?

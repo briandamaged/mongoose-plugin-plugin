@@ -1,6 +1,6 @@
 'use strict';
 
-function createPlugin() {
+function createPlugin(initCallback) {
 
   function plugin(schema) {
     for(let i = 0; i < plugin.spec.length; ++i) {
@@ -23,6 +23,10 @@ function createPlugin() {
   plugin.plugin = plugin;
 
   plugin.spec = [];
+
+  if(initCallback) {
+    initCallback(plugin);
+  }
 
   return plugin;
 }
