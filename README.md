@@ -10,6 +10,8 @@ npm install --save mongoose-plugin-plugin
 
 ## Usage ##
 
+Let's say that we have 3 plugins that we'd like to apply to all of our Schemas.  We can do this as follows:
+
 ```javascript
 // Here are some various Mongoose plugins
 var plugin1 = require('mongoose-plugin1');
@@ -24,9 +26,9 @@ var createMPP = require('mongoose-plugin-plugin');
 var mpp = createMPP()
 
 // Let's add the plugins and desired options
-mpp.push(plugin1);
-mpp.push(plugin2, {output: "log.txt"});
-mpp.push(plugin3, {fancy: true});
+mpp.push(plugin1)
+   .push(plugin2, {output: "log.txt"})
+   .push(plugin3, {fancy: true});
 
 
 // Now we can plugin mpp to each of our Schemas
