@@ -1,6 +1,6 @@
 {
   "name": "mongoose-plugin-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Mongoose plugin that plugs-in plugins!",
   "main": "src/index.js",
   "scripts": {
